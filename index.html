@@ -1,56 +1,182 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitrah Insani</title>
 
-    <title>SIT Fitrah Insani</title>
+  <!-- Bootstrap 6.0 Alpha.1 -->
+  <link
+    rel="stylesheet"
+    href="css/bootstrap.min.css"
+  >
 
-    <!--bootsrap to css-->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <!--connect to CSS Internal-->
-    <link rel="stylesheet" href="style.css"/>
-
+  <!-- CSS internal -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="navbar" style="background-color: rgb(255, 90, 1);"data-bs-theme="light">
-  <div class="container">
-  <!--logo-->
-   <a class="navbar-brand d-flex align-items-center gap-2"
-       href="#"
-       style="color: aliceblue;">
 
-      <img src="image/Logo-YFIB.png"
-           alt="Logo"
-           width="30"
-           height="30">
+<nav class="navbar px-3" style="background-color: rgb(255, 106, 0);">
+  <div class="container-fluid">
 
-      SIT FITHRAH INSANI
+    <!-- Logo dan nama di kiri -->
+    <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+      <img
+        src="image/Logo-YFIB.png"
+        alt="Logo Fitrah Insani"
+        width="30"
+        height="30"
+      >
+      Fitrah Insani
     </a>
 
-  <!--navbar-->
-    <ul class="nav justify-content-end">
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">Menu</a>
-      </li>
+    <!-- Navigasi di kanan -->
+    <ul class="nav justify-content-end align-items-center">
+
       <li class="nav-item">
         <a class="nav-link" href="#">Beranda</a>
       </li>
+
       <li class="nav-item">
-        <a class="nav-link" href="#">sejarah</a>
+        <a class="nav-link" href="#">Sejarah</a>
       </li>
+
+      <!-- Menu Unit Sekolah -->
       <li class="nav-item">
-        <a class="nav-link" href="#">Unit Sekolah</a>
+        <button
+          class="nav-link"
+          type="button"
+          data-bs-toggle="menu"
+          aria-expanded="false"
+        >
+          Unit Sekolah
+        </button>
+
+        <div class="menu">
+          <a class="menu-item" href="#">TK Fitrah Insani</a>
+          <a class="menu-item" href="#">SD Fitrah Insani</a>
+          <a class="menu-item" href="#">SMP Fitrah Insani</a>
+          <a class="menu-item" href="#">SMA Fitrah Insani</a>
+          <a class="menu-item" href="#">SMK Fitrah Insani</a>
+        </div>
       </li>
+
       <li class="nav-item">
-        <a class="nav-link" href="#">E-lerning</a>
+        <a class="nav-link" href="#">E-Learning</a>
       </li>
+
       <li class="nav-item">
         <a class="nav-link" href="#">Pendaftaran</a>
       </li>
-  </ul>
+
+    </ul>
   </div>
-  </nav>
+</nav>
+<!-- Carousel -->
+<div
+  id="carouselExampleInterval"
+  class="carousel slide position-relative"
+  data-bs-autoplay="true"
+>
+  <!-- Gambar -->
+  <div class="carousel-inner rounded-5">
+
+    <div class="carousel-item active" data-bs-interval="2000">
+      <img
+        src="image/Slider-Website.png"
+        class="d-block w-100"
+        alt="Gambar pertama"
+      >
+    </div>
+
+    <div class="carousel-item" data-bs-interval="4000">
+      <img
+        src="image/Slider-Website-1.png"
+        class="d-block w-100"
+        alt="Gambar kedua"
+      >
+    </div>
+
+  </div>
+
+  <!-- Panah kiri -->
+  <button
+    class="btn-icon btn-sm btn-subtle theme-secondary position-absolute top-50 start-0 translate-middle-y ms-3 z-1"
+    type="button"
+    data-bs-target="#carouselExampleInterval"
+    data-bs-slide="prev"
+    aria-label="Gambar sebelumnya"
+  >
+    <span class="carousel-icon-prev" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+
+  <!-- Panah kanan -->
+  <button
+    class="btn-icon btn-sm btn-subtle theme-secondary position-absolute top-50 end-0 translate-middle-y me-3 z-1"
+    type="button"
+    data-bs-target="#carouselExampleInterval"
+    data-bs-slide="next"
+    aria-label="Gambar berikutnya"
+  >
+    <span class="carousel-icon-next" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+
+  <!-- Indikator -->
+  <div class="carousel-indicators">
+    <button
+      type="button"
+      data-bs-target="#carouselExampleInterval"
+      data-bs-slide-to="0"
+      class="active"
+      aria-current="true"
+      aria-label="Slide 1"
+    ></button>
+
+    <button
+      type="button"
+      data-bs-target="#carouselExampleInterval"
+      data-bs-slide-to="1"
+      aria-label="Slide 2"
+    ></button>
+  </div>
+
+</div>
+
+<!-- Kontrol autoplay -->
+<div class="d-flex justify-content-end align-items-center mt-3">
+  <button
+    class="btn-icon btn-sm carousel-control-play-pause"
+    type="button"
+    data-bs-target="#carouselExampleInterval"
+    aria-label="Pause"
+    data-bs-pause-label="Pause"
+    data-bs-play-label="Play"
+  >
+    <span class="carousel-icon-pause" aria-hidden="true"></span>
+    <span class="carousel-icon-play" aria-hidden="true"></span>
+  </button>
+</div>
+<!-- Penutup Carousel-->
+
+<div class="d-grid gap-2">
+  <button class="btn-solid theme-primary" style="background-color: chocolate;" type="button">Button</button>
+</div>
+<h3>VISI & MISI SIT FITHRAH INSANI</h3>
+<h4>Visi</h4>
+<p>Menjadi Sekolah yang mendidik siswa agar memiliki dasar aqidah yang benar, berakhlak Islami, berilmu, dan mandiri</p>
+<h4>Misi</h4>
+<ol>
+  <li>Mendidik dan meluluskan siswa dengan keunggulan dalam <br>kepribadian Islami, Kemandirian, Keterampilan, dan Keilmuan</li>
+  <li>Menyediakan Sekolah dengan SDM, Sarana dan Prasarana <br>Berkualitas</li>
+  <li>Mengelola Sekolah yang unggul dalam Ilmu Pengetahuan dan <br>Teknologi dengan menggunakan Multi Media dan Multi Metode</li>
+</ol>
+<div class="d-grid gap-2">
+  <button class="btn-solid theme-primary" style="background-color: rgb(68, 62, 59);" type="button">Button</button>
+</div>
+<!-- JavaScript Bootstrap 6.0 Alpha.1 -->
+<script type="module" src="js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
-  
